@@ -1,0 +1,39 @@
+package io;
+
+import java.util.Scanner;
+
+public class Tugas_Praktikum {
+    public static void main(String[] args) {
+
+        Scanner tugas = new Scanner(System.in);
+
+    System.out.println("Program menghitung biaya listrik sederhana");
+    System.out.print("Nama Pelanggan \t\t : ");
+    String inputnama = tugas.nextLine();
+    System.out.print("Kelurahan \t\t : ");
+    String inputkelurahan = tugas.next();
+    System.out.print("Posisi awal \t\t : ");
+    int inputawal = tugas.nextInt();
+    System.out.print("Posisi akhir \t\t : ");
+    int inputakhir = tugas.nextInt();
+    System.out.print("Biaya beban \t\t : ");
+    int inputbeban = tugas.nextInt();
+    System.out.print("PPJ \t\t\t : ");
+    int inputppj = tugas.nextInt();
+
+    int inputpemakaian = inputakhir - inputawal;
+    int inputtarif = inputbeban * inputpemakaian;
+    int ppjtotal = inputtarif / inputppj;
+    int totalbiaya = inputtarif + ppjtotal;
+
+    System.out.println("\n=============================PLN Java=============================");
+    System.out.println("Nama Pelanggan \t\t : " + inputnama);
+    System.out.println("Kelurahan \t\t : " + inputkelurahan);
+    System.out.println("Pemakaian bulan ini \t : " + inputpemakaian + " Kwh Meter");
+    System.out.println("Tarif Listrik \t\t : " + "Rp " + inputtarif + ",-");
+    System.out.println("PPJ 10% \t\t : " + "Rp " + ppjtotal + ",-");
+    System.out.println("Total Bayar \t\t : " + "Rp "  + totalbiaya + ",-");
+    System.out.println("==================================================================");
+    }
+    
+}
